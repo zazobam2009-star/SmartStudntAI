@@ -1,4 +1,3 @@
 aiogram==3.4.1
-openai
-reportlab
-Pillow
+openai==1.43.0
+python-dotenv
