@@ -9,24 +9,15 @@ from reportlab.lib.styles import getSampleStyleSheet
 import uuid
 
 
-# ==============================
-#  BU YERGA TELEGRAM BOT TOKENI
-# ==============================
-BOT_TOKEN = "7989317008:AAGhfJXyWOmPJolIUi44Uknp-9xVwpxzVas"
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")          # token faylga yozilmaydi
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 logging.basicConfig(level=logging.INFO)
-
-
-# ==============================
-#  BU YERGA OPENAI API KEY
-# ==============================
-client = OpenAI(
-    api_key="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"
-)
-
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 # --- ASOSIY MENU ---
 def main_menu():
