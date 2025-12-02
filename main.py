@@ -8,12 +8,9 @@ from reportlab.lib.pagesizes import A4
 from openai import OpenAI
 from io import BytesIO
 
-bot = Bot(token=os.getenv("7989317008:AAHKLs4EFbjBUqIjZnmEkkDtQH3CLHuqJlc"))
-dp = Dispatcher()
-
-client = OpenAI(api_key=os.getenv("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"))
-
-
+import os
+BOT_TOKEN = os.getenv("7989317008:AAEnH9tJaPt4p5ZWi3K0hJvrmAZA4-qRNoI")
+OPENAI_KEY = os.getenv("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")
 # --- MENU ---
 def main_menu():
     kb = InlineKeyboardBuilder()
